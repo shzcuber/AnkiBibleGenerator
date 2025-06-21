@@ -10,7 +10,7 @@ See LICENSE file or <http://www.gnu.org/licenses/agpl.html> for details.
 import sys
 
 # don't try to set up the UI if running unit tests
-if 'pytest' not in sys.modules:
+if "pytest" not in sys.modules:
     # pylint: disable=import-error, no-name-in-module
     # pylint: disable=invalid-name
     import aqt
@@ -22,19 +22,20 @@ if 'pytest' not in sys.modules:
 
     def open_dialog():
         "Launch the add-poem dialog."
-        current_version = aqt.mw.col.get_config('lpcg_model_version', default="none")
+        current_version = aqt.mw.col.get_config("lpcg_model_version", default="none")
         if not models.LpcgOne.is_at_version(current_version):
             showWarning(
                 "Your LPCG note type is out of date and needs to be upgraded "
                 "before you can use LPCG. To upgrade the note type, restart Anki "
-                "and respond yes to the prompt.")
+                "and respond yes to the prompt."
+            )
             return
         dialog = LPCGDialog(aqt.mw)
         dialog.exec()
 
     if aqt.mw is not None:
         action = QAction(aqt.mw)
-        action.setText("Import &Lyrics/Poetry")
+        action.setText("Import &Bible")
         aqt.mw.form.menuTools.addAction(action)
         action.triggered.connect(open_dialog)
 

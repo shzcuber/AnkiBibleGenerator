@@ -3,7 +3,7 @@ Importing Poems
 ===============
 
 To add a poem to your collection,
-choose :menuselection:`Tools --> Import Lyrics/Poetry`.
+choose :menuselection:`Tools --> Import Bible`.
 You will see the following window:
 
 .. image:: screenshots/importing.*

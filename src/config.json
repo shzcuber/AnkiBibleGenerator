@@ -1,7 +1,8 @@
 {
-    "defaultLinesOfContext": 2,
-    "defaultLinesToRecite": 2,
-    "defaultLinesInGroupsOf": 1,
-    "endOfStanzaMarker": " ⊗",
-    "endOfTextMarker": " □"
+  "defaultLinesOfContext": 1,
+  "defaultLinesToRecite": 1,
+  "defaultLinesInGroupsOf": 1,
+  "endOfStanzaMarker": " ⊗",
+  "endOfTextMarker": " □",
+  "esv_api_key": ""
 }

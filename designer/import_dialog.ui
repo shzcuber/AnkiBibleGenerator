@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>LPCG – Import Lyrics/Poetry</string>
+   <string>LPCG – Import Bible</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -69,6 +69,102 @@
      <item row="6" column="1">
       <widget class="QLineEdit" name="tagsBox"/>
      </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>&amp;Book</string>
+       </property>
+       <property name="buddy">
+        <cstring>bookCombo</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <layout class="QHBoxLayout" name="bibleSelectionLayout">
+       <item>
+        <widget class="QComboBox" name="bookCombo">
+         <property name="toolTip">
+          <string>Select the Bible book</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="chapterCombo">
+         <property name="toolTip">
+          <string>Select the chapter</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="verseLabel">
+         <property name="text">
+          <string>:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="startVerseCombo">
+         <property name="toolTip">
+          <string>Select the starting verse</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="dashLabel">
+         <property name="text">
+          <string>-</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="endVerseCombo">
+         <property name="toolTip">
+          <string>Select the ending verse (optional)</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="fetchPassageButton">
+         <property name="text">
+          <string>&amp;Fetch</string>
+         </property>
+         <property name="toolTip">
+          <string>Fetch the selected Bible passage</string>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
      <item row="8" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
@@ -79,7 +175,7 @@
        </property>
       </widget>
      </item>
-     <item row="8" column="1">
+     <item row="9" column="1">
       <widget class="QSpinBox" name="contextLinesSpin">
        <property name="minimumSize">
         <size>
@@ -101,7 +197,7 @@
        </property>
       </widget>
      </item>
-     <item row="9" column="0">
+     <item row="10" column="0">
       <widget class="QLabel" name="label_5">
        <property name="text">
         <string>Lines to &amp;Recite</string>
@@ -111,7 +207,7 @@
        </property>
       </widget>
      </item>
-     <item row="9" column="1">
+     <item row="10" column="1">
       <widget class="QSpinBox" name="reciteLinesSpin">
        <property name="toolTip">
         <string>Number of occluded lines shown on the answer side of each card.</string>
@@ -124,7 +220,7 @@
        </property>
       </widget>
      </item>
-     <item row="10" column="0">
+     <item row="11" column="0">
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Lines in Gro&amp;ups of</string>
@@ -134,7 +230,7 @@
        </property>
       </widget>
      </item>
-     <item row="10" column="1">
+     <item row="11" column="1">
       <widget class="QSpinBox" name="groupLinesSpin">
        <property name="minimum">
         <number>1</number>
@@ -149,7 +245,7 @@
    <item>
     <widget class="QLabel" name="label_6">
      <property name="text">
-      <string>&amp;Poem:</string>
+      <string>&amp;Bible Passage:</string>
      </property>
      <property name="buddy">
       <cstring>textBox</cstring>
@@ -171,7 +267,7 @@
      <item>
       <widget class="QPushButton" name="openFileButton">
        <property name="toolTip">
-        <string>Replace the contents of the poem editor with a text file on your computer.</string>
+        <string>Replace the contents of the bible passage editor with a text file on your computer.</string>
        </property>
        <property name="text">
         <string>&amp;Open file</string>
@@ -200,7 +296,7 @@
      <item>
       <widget class="QPushButton" name="addCardsButton">
        <property name="toolTip">
-        <string>Generate notes from the text in the poem editor.</string>
+        <string>Generate notes from the text in the bible passage editor.</string>
        </property>
        <property name="text">
         <string>A&amp;dd notes</string>
@@ -237,6 +333,11 @@
   <tabstop>titleBox</tabstop>
   <tabstop>authorBox</tabstop>
   <tabstop>tagsBox</tabstop>
+  <tabstop>bookCombo</tabstop>
+  <tabstop>chapterCombo</tabstop>
+  <tabstop>startVerseCombo</tabstop>
+  <tabstop>endVerseCombo</tabstop>
+  <tabstop>fetchPassageButton</tabstop>
   <tabstop>contextLinesSpin</tabstop>
   <tabstop>reciteLinesSpin</tabstop>
   <tabstop>groupLinesSpin</tabstop>
