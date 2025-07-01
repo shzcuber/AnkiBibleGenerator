@@ -29,11 +29,26 @@ or at your option, any later version.
 
 # Anki Bible Generator
 
+## Build
+
+```sh
+# Clone the repository
+git clone https://github.com/shzcuber/AnkiBibleGenerator
+
+# Install Python dependencies
+cd AnkiBibleGenerator
+python -m venv venv
+pip install -r requirements.txt
+
+# Build
+make forms
+make addon
+```
+
 ## Installation
 
-1. Download the .ankiaddon file
-2. In Anki: Tools → Add-ons → Install from file
-3. Select the downloaded file
+1. In Anki: Tools → Add-ons → Install from file
+2. Select the downloaded file
 
 ## Setup (Required)
 
