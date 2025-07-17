@@ -39,6 +39,16 @@ To import a Bible passage, select Tools → Import Bible.
 In the Bible passage field, each line will generate a different card for memorisation.
 Standard usage is therefore to place a newline between each verse, but you can also split verses if they are particularly long.
 
+## Screenshots
+
+<img src="docs/screenshots/bible_importing.png" alt="Importing content into Anki Bible Generator" width=300>
+<img src="docs/screenshots/bible_beginning-card-front.png" alt="Studying the first section of a passage (card front)" width=300>
+<img src="docs/screenshots/bible_beginning-card-back.png" alt="Studying the first section of a passage (card back)" width=300>
+<img src="docs/screenshots/bible_middle-card-front.png" alt="Studying a middle section of a passage (card front)" width=300>
+<img src="docs/screenshots/bible_middle-card-back.png" alt="Studying a middle section of a passage (card back)" width=300>
+
+---
+
 # Original README
 
 Anki **Lyrics/Poetry Cloze Generator** (LPCG) is an add-on for [Anki][]
