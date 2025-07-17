@@ -1,3 +1,46 @@
+# Anki Bible Generator
+
+This is a fork of [Anki Lyrics/Poetry Cloze Generator](https://github.com/sobjornstad/AnkiLPCG), specialised for memorising the Bible.
+
+Long passages can be split into parts, with each part forming the prompt for recalling the next.
+If you use the English Standard Version, passages can be imported and split into verses automatically.
+
+## Installation and setup
+
+You first need to clone the repository and generate a `.ankiaddon` file, which you can do with the following commands:
+
+```sh
+# Clone the repository
+git clone https://github.com/shzcuber/AnkiBibleGenerator
+
+# Install Python dependencies
+cd AnkiBibleGenerator
+python -m venv venv
+pip install -r requirements.txt
+
+# Build
+make forms
+make addon
+```
+
+This will generate `build.ankiaddon` in the same directory.
+To import, open Anki and select Tools → Add-ons → Install from file.
+
+If you want to automatically import passages from the ESV, you need to provide a free API key:
+1. Get a free API key from https://api.esv.org/
+2. In Anki: Tools → Add-ons → Select "Bible Generator" → Config
+3. Set `esv_api_key` to `"Token your_key_here"`
+4. Click OK
+
+## Usage
+
+To import a Bible passage, select Tools → Import Bible.
+
+In the Bible passage field, each line will generate a different card for memorisation.
+Standard usage is therefore to place a newline between each verse, but you can also split verses if they are particularly long.
+
+# Original README
+
 Anki **Lyrics/Poetry Cloze Generator** (LPCG) is an add-on for [Anki][]
 to make it easier to study long passages of verbatim text,
 like poetry or song lyrics.
@@ -26,37 +69,3 @@ or at your option, any later version.
 <img src="docs/screenshots/importing.png" alt="Importing content into LPCG" width=300>
 <img src="docs/screenshots/studying.png" alt="Studying on the desktop" width=300>
 <img src="docs/screenshots/iphone.jpg" alt="Studying on an iPhone" width=200>
-
-# Anki Bible Generator
-
-## Build
-
-```sh
-# Clone the repository
-git clone https://github.com/shzcuber/AnkiBibleGenerator
-
-# Install Python dependencies
-cd AnkiBibleGenerator
-python -m venv venv
-pip install -r requirements.txt
-
-# Build
-make forms
-make addon
-```
-
-## Installation
-
-1. In Anki: Tools → Add-ons → Install from file
-2. Select the downloaded file
-
-## Setup (Required)
-
-1. Get a free API key from https://api.esv.org/
-2. In Anki: Tools → Add-ons → Select "Bible Generator" → Config
-3. Set `esv_api_key` to: `"Token your_key_here"`
-4. Click OK
-
-## Usage
-
-Tools → Import Bible
