@@ -259,7 +259,7 @@ def add_notes(col: Any, note_constructor: Callable,
     """
     added = 0
     for line in _poemlines_from_textlines(text, group_lines):
-        n = note_constructor(col, col.models.by_name("LPCG 1.0"))
+        n = note_constructor(col, col.models.by_name("Anki Bible Generator"))
         line.populate_note(n, title, author, tags, context_lines, recite_lines, deck_id)
         col.addNote(n)
         added += 1

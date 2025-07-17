@@ -181,7 +181,7 @@ class LPCGDialog(QDialog):
             return
         escaped_title = title.replace('"', '\\"')
         if self.mw.col.find_notes(
-            f'"note:{models.LpcgOne.name}" '  # pylint: disable=no-member
+            f'"note:{models.AbgOne.name}" '  # pylint: disable=no-member
             f'"Title:{escaped_title}"'
         ):
             showWarning(
@@ -226,7 +226,7 @@ class LPCGDialog(QDialog):
                 " yet, you can delete the note type in Tools -> Manage"
                 " Note Types and restart Anki to fix this problem."
                 " Otherwise, please add the field back to the note type. ".format(
-                    field=str(e), name=models.LpcgOne.name
+                    field=str(e), name=models.AbgOne.name
                 )
             )  # pylint: disable=no-member
             return

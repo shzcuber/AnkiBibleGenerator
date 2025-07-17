@@ -193,12 +193,11 @@ def upgrade_onethreeoh_to_onefouroh(mod):
         )
 
 
-class LpcgOne(ModelData):
-    class LpcgOneTemplate(TemplateData):
-        name = "LPCG1"
+class AbgOne(ModelData):
+    class AbgOneTemplate(TemplateData):
+        name = "Anki Bible Generator"
         front = """
-            <div class="title">{{Title}} {{Sequence}}</div>
-            {{#Author}}<div class="author">{{Author}}</div>{{/Author}}
+            <div class="title">{{Sequence}}</div>
 
             <br>
 
@@ -211,8 +210,7 @@ class LpcgOne(ModelData):
             </div>
         """
         back = """
-            <div class="title">{{Title}} {{Sequence}}</div>
-            {{#Author}}<div class="author">{{Author}}</div>{{/Author}}
+            <div class="title">{{Sequence}}</div>
 
             <br>
 
@@ -222,9 +220,9 @@ class LpcgOne(ModelData):
             </div>
         """
 
-    name = "LPCG 1.0"
+    name = "Anki Bible Generator"
     fields = ("Line", "Context", "Title", "Author", "Sequence", "Prompt")
-    templates = (LpcgOneTemplate,)
+    templates = (AbgOneTemplate,)
     styling = """
         .card {
             font-family: arial;
@@ -277,7 +275,7 @@ def ensure_note_type() -> None:
     Create or update the LPCG note type as needed.
     """
     assert aqt.mw is not None, "Tried to use models before Anki is initialized!"
-    mod = LpcgOne
+    mod = AbgOne
 
     if not mod.in_collection():
         model_data, new_version = mod.to_model()
