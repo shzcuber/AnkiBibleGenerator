@@ -21,7 +21,7 @@ class PoemLine:
         note.tags = tags
         note['Title'] = title
         note['Author'] = author
-        note['Sequence'] = str(self.seq)
+        note['Sequence'] = title + " &sect;" + str(self.seq)
         note['Context'] = self._format_context(context_lines)
         note['Line'] = self._format_text(recite_lines)
         prompt = self._get_prompt(recite_lines)
