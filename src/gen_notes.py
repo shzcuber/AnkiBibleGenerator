@@ -21,7 +21,7 @@ class PoemLine:
         note.tags = tags
         note['Title'] = title
         note['Author'] = author
-        note['Sequence'] = str(self.seq)
+        note['Sequence'] = title + " &sect;" + str(self.seq)
         note['Context'] = self._format_context(context_lines)
         note['Line'] = self._format_text(recite_lines)
         prompt = self._get_prompt(recite_lines)
@@ -259,7 +259,7 @@ def add_notes(col: Any, note_constructor: Callable,
     """
     added = 0
     for line in _poemlines_from_textlines(text, group_lines):
-        n = note_constructor(col, col.models.by_name("LPCG 1.0"))
+        n = note_constructor(col, col.models.by_name("Anki Bible Generator"))
         line.populate_note(n, title, author, tags, context_lines, recite_lines, deck_id)
         col.addNote(n)
         added += 1
