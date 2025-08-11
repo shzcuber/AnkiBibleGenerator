@@ -23,7 +23,7 @@ if "pytest" not in sys.modules:
     def open_dialog():
         "Launch the add-poem dialog."
         current_version = aqt.mw.col.get_config("lpcg_model_version", default="none")
-        if not models.LpcgOne.is_at_version(current_version):
+        if not models.AbgOne.is_at_version(current_version):
             showWarning(
                 "Your LPCG note type is out of date and needs to be upgraded "
                 "before you can use LPCG. To upgrade the note type, restart Anki "
